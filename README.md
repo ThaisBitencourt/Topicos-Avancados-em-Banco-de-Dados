@@ -23,7 +23,6 @@
 - [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/)
 - [Victor Cardial](https://github.com/VictorCardial/)
 
-## Entrega 01
 ### Matéria: Tópicos Avançados de Banco de Dados
 ### Professor: Eduardo Sakaue
 
