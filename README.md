@@ -39,16 +39,18 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ## Entregas
 
-### Sprint 01 – 08/03/2021
+### Kick Off - 28/02/2021 a 06/03/2021
 
-### Sprint 02 – 
+### Sprint 01 – 08/03/2021 a 28/03/2021
 
-### Sprint 03 – 
+### Sprint 02 – 29/03/2021 a 18/04/2021 
 
-### Sprint 04 – 
+### Sprint 03 – 26/04/2021 a 16/05/2021
 
-### Sprint 05 – 
+### Sprint 04 – 17/05/2021 a 05/06/2021
 
-### Sprint 06 – 
+### Apresentação Final – 07/06/2021 a 11/06/2021 
+
+### Feira de Soluções – 14/06/2021 a 18/06/2021 
 
 
