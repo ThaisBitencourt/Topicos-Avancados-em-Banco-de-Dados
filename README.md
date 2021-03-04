@@ -1,4 +1,4 @@
-# Tópicos Avançados de Banco de Dados
+ # Tópicos Avançados de Banco de Dados
 
 ## Índice
 
@@ -23,15 +23,15 @@
 - [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/)
 - [Victor Cardial](https://github.com/VictorCardial/)
 
-##Entrega 01
-###Matéria: Tópicos Avançados de Banco de Dados
-###Professor: Eduardo Sakaue
+## Entrega 01
+### Matéria: Tópicos Avançados de Banco de Dados
+### Professor: Eduardo Sakaue
 
-###Problema:
+### Problema:
 Devido a Lei “Art. 1º Esta Lei dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural.” que entrou em vigência em agosto de 2020, foi pedido para criarmos uma solução que resolva algum problema relacionado a lei.
 O foco do grupo será na Gestão de consentimento do titular ou responsável (OptIn/OptOut), sendo esta pessoa física e no compartilhamento consciente de arquivos com dados de pessoais.
 
-###Solução:
+### Solução:
 Desenvolver uma Plataforma que faz gestão de OptIn e OptOut e verifica a existência de dados pessoais em arquivos (TXT, Word e PDF), otimizando os atendimentos de LGPD;
 Com acesso ao Banco de Dados de uma empresa (para desenvolver os testes iremos criar um banco de dados espelhado), colocaríamos as flags de OptIn e OptOut, considerando o período que o titular concedeu a utilização dos dados; 
 Também iremos desenvolver uma ferramenta dentro desta plataforma web que irá realizar uma Varredura de Dados Pessoais (CPF, RG, Telefone, E-mail e Nome). A ferramenta recebe um arquivo e deve retornar de Forma Temporária os dados encontrados;
