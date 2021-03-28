@@ -39,9 +39,9 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ## Entregas
 
-### Kick Off - 06/03/2021
+### Kick Off - 28/02/2021 a 06/03/2021 
 
-### Sprint 01 – 28/03/2021
+### Sprint 01 – 08/03/2021 a 28/03/2021
 
 Conforme o problema proposto em sala de aula: LGPD e como realizar a gestão de OptIn e OptOut.
 
@@ -59,14 +59,24 @@ https://colab.research.google.com/drive/1b9PlOG9cYDp_cd26JIMdjrgcNfHsP8Bg#scroll
 Github da API para o verificador:
 https://github.com/ThiagoDisk/APIPython
 
-### Sprint 02 – 18/04/2021 
+### Sprint 02 – 29/03/2021 a 18/04/2021
+- Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
 
-### Sprint 03 – 16/05/2021
+- Integrar varredura com banco de dados (optout).
 
-### Sprint 04 – 05/06/2021
+### Sprint 03 – 26/04/2021 a 16/05/2021
+- Desenvolvimento da Plataforma web , integrar ferramenta de OptOut e Varredura de Dados Pessoais.
 
-### Apresentação Final – 11/06/2021 
+-  Buscador e Validador de Nome 
 
-### Feira de Soluções – 18/06/2021 
+### Sprint 04 – 17/05/2021 a 05/06/2021
+- Verificar lista de disparo de e-mail marketing 
+
+- Durante a varredura de dados pessoais, cruzar os dados com a flag de consentimento, para verificar documentos que não estão autorizados.
+
+
+### Apresentação Final – 07/06/2021 a 11/06/2021 
+
+### Feira de Soluções – 14/06/2021 a 18/06/2021 
 
 
