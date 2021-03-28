@@ -5,7 +5,7 @@
 - [Tópicos Avançados de Banco de Dados]
     - [Entregas](#entregas)
     - [Sprint 01 – 28/03/2021](#sprint-01--28032021)
-    - [Sprint 02 – 18/04/2021](#sprint-02--18042021)
+    - [Sprint 02 – 18/04/2021](#sprint-02--29032021-a-18042021)
     - [Sprint 03 – 16/05/2021](#sprint-03--16052021)
     - [Sprint 04 – 05/06/2021](#sprint-04--05062021)
     - [Sprint 05 – 11/06/2021](#apresentação-final--11062021)
