@@ -1,4 +1,4 @@
- # Tópicos Avançados de Banco de Dados - 2021.1
+ # Tópicos Avançados de Banco de Dados
 
 ## Índice
 
@@ -38,10 +38,10 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ## Tecnologias Utilizadas
 
-- Python: linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi escolhida para desenvolver o validador de dados pessoais.
-- Pandas: é uma biblioteca de software escrita para a linguagem de programação Python para manipulação e análise de dados. Biblioteca Python escolhida para validar os dados pessoais. 
-- Flask e Flask Restfull: micro-framework multiplataforma que provê um modelo simples para o desenvolvimento web. Foi utilizado para desenvolver a API do validador de dados pessoais.
-- SQL Server: sistema gerenciador de Banco de dados relacional, foi escolhido para desenvolver o banco de dados.
+- Python: linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte, além de fazer a correção de alocação de memória, gerenciamento de recursos, etc, automaticamente e eficiente permitindo que a concentração fosse exclusivamente no problema. Foi escolhida para desenvolver o validador de dados pessoais.
+- Pandas: é uma biblioteca de software escrita para a linguagem de programação Python para manipulação e análise de dados, oferecendo estruturas e operações para manipular tabelas numéricas e séries temporais. Biblioteca Python escolhida para validar os dados pessoais por sua capacidade de simplificar tarefas complicadas de manipulação de dados.
+- Flask e Flask Restfull: micro-framework multiplataforma que provê um modelo simples para o desenvolvimento web e que torna a aplicação muito mais leve e mais fácil de ser executada. Foi utilizado para desenvolver a API do validador de dados pessoais.
+- SQL Server: sistema gerenciador de Banco de dados relacional, garantindo o suporte na recuperação dos dados, facilidade de uso e capacidade de melhor compreensão dos conjuntos de dados. Foi escolhido para desenvolver o banco de dados.
 
 
 
