@@ -49,7 +49,8 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ### Kick Off 
 📅 *28/02/2021 a 06/03/2021*
-Definição das User Stories , Tasks e Tecnologias que serão utilizadas.
+
+- Definição das User Stories , Tasks e Tecnologias que serão utilizadas.
 
 ### Sprint 01 
 📅 *08/03/2021 a 28/03/2021*
