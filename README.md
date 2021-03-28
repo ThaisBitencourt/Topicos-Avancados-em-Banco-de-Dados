@@ -2,26 +2,25 @@
 
 ## Índice
 
-- [Tópicos Avançados de Banco de Dados]
-    - [Entregas](#entregas)
-    - [Sprint 01 – 28/03/2021](#sprint-01--28032021)
-    - [Sprint 02 – 18/04/2021](#sprint-02--29032021-a-18042021)
-    - [Sprint 03 – 16/05/2021](#sprint-03--16052021)
-    - [Sprint 04 – 05/06/2021](#sprint-04--05062021)
-    - [Sprint 05 – 11/06/2021](#apresentação-final--11062021)
-    - [Sprint 06 – 18/06/2021](#feira-de-soluções--18062021)
+-  [Entregas](#entregas)
+    - [Kick Off](#kickoff) - 28/02/2021 a 06/03/2021 
+    - [Sprint 01](#sprint-01) – 08/03/2021 a 28/03/2021
+    - [Sprint 02](#sprint-02) - 29/03/2021 a 18/04/2021
+    - [Sprint 03](#sprint-03)  - 26/04/2021 a 16/05/2021
+    - [Sprint 04](#sprint-04) - 17/05/2021 a 05/06/2021
+    - [Sprint 05](#apresentacao-final) - 07/06/2021 a 11/06/2021
+    - [Sprint 06](#feira-de-solucoes) - 14/06/2021 a 18/06/2021 
 
 ## Equipe
 
-- [Giovanna Xavier](https://https://github.com/giovannaxavierm/)
-- [Hercules Pereira](https://github.com/herculespsilva/)
-- [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/)
-- [Paulo Cesar](https://github.com/paullo97/)
-- [Sandro Toline](https://github.com/sandrotoline/)
-- [Thaís Bitencourt de Meneses](https://www.linkedin.com/in/thaisbitencourt/)
-- [Thiago Dias](https://github.com/ThiagoDisk/)
-- [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/)
-- [Victor Cardial](https://github.com/VictorCardial/)
+- 👩‍💻 [Giovanna Xavier](https://https://github.com/giovannaxavierm/)
+- 👨‍💻 [Hercules Pereira](https://github.com/herculespsilva/)
+- 👩‍💻 [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/)
+- 👨‍💻 [Sandro Toline](https://github.com/sandrotoline/)
+- 👩‍💻 [Thaís Bitencourt de Meneses](https://www.linkedin.com/in/thaisbitencourt/)
+- 👨‍💻 [Thiago Dias](https://github.com/ThiagoDisk/)
+- 👨‍💻 [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/)
+- 👨‍💻 [Victor Cardial](https://github.com/VictorCardial/)
 
 ### Matéria: Tópicos Avançados de Banco de Dados
 ### Professor: Eduardo Sakaue
@@ -37,11 +36,22 @@ Também iremos desenvolver uma ferramenta dentro desta plataforma web que irá r
 Realizaremos os testes com dados fictícios;
 Também considerando ao que se refere a menores de idade, a Lei “O tratamento de dados pessoais de crianças deverá ser realizado com o consentimento específico e em destaque dado por pelo menos um dos pais ou pelo responsável legal.” iremos tratar em nosso projeto.
 
+## Tecnologias Utilizadas
+
+- Python: linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi escolhida para desenvolver o validador de dados pessoais.
+- Pandas: é uma biblioteca de software escrita para a linguagem de programação Python para manipulação e análise de dados. Biblioteca Python escolhida para validar os dados pessoais. 
+- Flask e Flask Restfull: micro-framework multiplataforma que provê um modelo simples para o desenvolvimento web. Foi utilizado para desenvolver a API do validador de dados pessoais.
+- SQL Server: sistema gerenciador de Banco de dados relacional, foi escolhido para desenvolver o banco de dados.
+
+
+
 ## Entregas
 
-### Kick Off - 28/02/2021 a 06/03/2021 
+### Kick Off 
+📅 *28/02/2021 a 06/03/2021*
 
-### Sprint 01 – 08/03/2021 a 28/03/2021
+### Sprint 01 
+📅 *08/03/2021 a 28/03/2021*
 
 Conforme o problema proposto em sala de aula: LGPD e como realizar a gestão de OptIn e OptOut.
 
@@ -49,34 +59,37 @@ Conforme o problema proposto em sala de aula: LGPD e como realizar a gestão de 
 
  O artigo acadêmico se encontra disponível no link abaixo.
 
- Link: https://github.com/VictorCardial/Banco_de_Dados_SQLSERVER 
+ [Banco de Dados SQL Server - OptOUt](https://github.com/VictorCardial/Banco_de_Dados_SQLSERVER) 
 
 - Desenvolvimento do verificador em Python onde vemos a existência de dados pessoais(CPF, CNH, CNPJ, PIS, Titulo Eleitoral, CEP e Celular) em arquivos (TXT, Word e PDF), criamos uma API em Python que recebe o código e retorna através do Postman o dado encontrado.
 
-Código feito em Python para o verificador:
-https://colab.research.google.com/drive/1b9PlOG9cYDp_cd26JIMdjrgcNfHsP8Bg#scrollTo=fZUsO84VZKNc
+[Código em Python - verificador](https://colab.research.google.com/drive/1b9PlOG9cYDp_cd26JIMdjrgcNfHsP8Bg#scrollTo=fZUsO84VZKNc)
 
-Github da API para o verificador:
-https://github.com/ThiagoDisk/APIPython
+[API - verificador](https://github.com/ThiagoDisk/APIPython)
 
-### Sprint 02 – 29/03/2021 a 18/04/2021
+### Sprint 02 
+📅 *29/03/2021 a 18/04/2021*
 - Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
 
 - Integrar varredura com banco de dados (optout).
 
-### Sprint 03 – 26/04/2021 a 16/05/2021
+### Sprint 03 
+📅 *26/04/2021 a 16/05/2021*
 - Desenvolvimento da Plataforma web , integrar ferramenta de OptOut e Varredura de Dados Pessoais.
 
 -  Buscador e Validador de Nome 
 
-### Sprint 04 – 17/05/2021 a 05/06/2021
+### Sprint 04
+📅 *17/05/2021 a 05/06/2021*
 - Verificar lista de disparo de e-mail marketing 
 
 - Durante a varredura de dados pessoais, cruzar os dados com a flag de consentimento, para verificar documentos que não estão autorizados.
 
 
-### Apresentação Final – 07/06/2021 a 11/06/2021 
+### Apresentação Final 
+📅 *07/06/2021 a 11/06/2021*
 
-### Feira de Soluções – 14/06/2021 a 18/06/2021 
+### Feira de Soluções 
+📅 *14/06/2021 a 18/06/2021*
 
 
