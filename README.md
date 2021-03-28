@@ -43,6 +43,14 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ### Sprint 01 – 28/03/2021
 
+Conforme o problema proposto em sala de aula: LGPD e como realizar a gestão de OptIn e OptOut.
+
+Como proposta de solução para o problema mencionado acima, temos: Um modelo de Banco de Dados (SQLServer) teste chamado Northwind, juntamente com a implementação de políticas e segurança do tipo RLS (Row Level Security) e algumas alterações na tabela de dados cliente, como por exemplo, adição de um campo Flag na tabela para que seja possível registrar o atual estado de seu consentimento com relação aos tratamento de seus dados pessoais e uma tabela de histórico, contendo as datas de possíveis concessões e revogações do direito de manipular seus dados pessoais.
+
+ O artigo acadêmico se encontra disponível no link abaixo.
+
+ Link: https://github.com/VictorCardial/Banco_de_Dados_SQLSERVER 
+
 ### Sprint 02 – 18/04/2021 
 
 ### Sprint 03 – 16/05/2021
