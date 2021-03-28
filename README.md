@@ -45,13 +45,13 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 Conforme o problema proposto em sala de aula: LGPD e como realizar a gestão de OptIn e OptOut.
 
--Como proposta de solução para o problema mencionado acima, temos: Um modelo de Banco de Dados (SQLServer) teste chamado Northwind, juntamente com a implementação de políticas e segurança do tipo RLS (Row Level Security) e algumas alterações na tabela de dados cliente, como por exemplo, adição de um campo Flag na tabela para que seja possível registrar o atual estado de seu consentimento com relação aos tratamento de seus dados pessoais e uma tabela de histórico, contendo as datas de possíveis concessões e revogações do direito de manipular seus dados pessoais.
+- Como proposta de solução para o problema mencionado acima, temos: Um modelo de Banco de Dados (SQLServer) teste chamado Northwind, juntamente com a implementação de políticas e segurança do tipo RLS (Row Level Security) e algumas alterações na tabela de dados cliente, como por exemplo, adição de um campo Flag na tabela para que seja possível registrar o atual estado de seu consentimento com relação aos tratamento de seus dados pessoais e uma tabela de histórico, contendo as datas de possíveis concessões e revogações do direito de manipular seus dados pessoais.
 
  O artigo acadêmico se encontra disponível no link abaixo.
 
  Link: https://github.com/VictorCardial/Banco_de_Dados_SQLSERVER 
 
--Desenvolvimento do verificador em Python onde vemos a existência de dados pessoais(CPF, CNH, CNPJ, PIS, Titulo Eleitoral, CEP e Celular) em arquivos (TXT, Word e PDF), criamos uma API em Python que recebe o código e retorna através do Postman o dado encontrado.
+- Desenvolvimento do verificador em Python onde vemos a existência de dados pessoais(CPF, CNH, CNPJ, PIS, Titulo Eleitoral, CEP e Celular) em arquivos (TXT, Word e PDF), criamos uma API em Python que recebe o código e retorna através do Postman o dado encontrado.
 
 Código feito em Python para o verificador:
 https://colab.research.google.com/drive/1b9PlOG9cYDp_cd26JIMdjrgcNfHsP8Bg#scrollTo=fZUsO84VZKNc
