@@ -8,8 +8,6 @@
     - [Sprint 02](#sprint-02) - 29/03/2021 a 18/04/2021
     - [Sprint 03](#sprint-03)  - 26/04/2021 a 16/05/2021
     - [Sprint 04](#sprint-04) - 17/05/2021 a 05/06/2021
-    - [Sprint 05](#apresentacao-final) - 07/06/2021 a 11/06/2021
-    - [Sprint 06](#feira-de-solucoes) - 14/06/2021 a 18/06/2021 
 
 ## Equipe
 
