@@ -53,7 +53,7 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 ### Sprint 01 
 📅 *08/03/2021 a 28/03/2021*
 
-##### Banco de Dados SQL Server - Gestão de OptIn e OptOut - [DOCUMENTAÇÃO](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/EntregaBanco.md) 
+##### Banco de Dados SQL Server - Gestão de OptIn e OptOut - [DOCUMENTAÇÃO](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/banco/README.md) 
 
 - Como proposta de solução para o problema mencionado acima, temos: Um modelo de Banco de Dados (SQLServer) teste chamado Northwind, juntamente com a implementação de políticas e segurança do tipo RLS (Row Level Security) e algumas alterações na tabela de dados cliente, como por exemplo, adição de um campo Flag na tabela para que seja possível registrar o atual estado de seu consentimento com relação aos tratamento de seus dados pessoais e uma tabela de histórico, contendo as datas de possíveis concessões e revogações do direito de manipular seus dados pessoais.
 
