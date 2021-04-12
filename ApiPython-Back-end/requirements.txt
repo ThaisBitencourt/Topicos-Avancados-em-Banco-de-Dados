@@ -1,0 +1,7 @@
+Flask
+flask-restful
+docx2txt
+validate-docbr
+pycep-correios
+phonenumbers
+textract
