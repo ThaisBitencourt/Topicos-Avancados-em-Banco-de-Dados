@@ -1,0 +1,145 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:top;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+a{text-decoration:none;color:#333}a:hover{text-decoration:none}a:hover{text-decoration:none}
+body{
+	overflow-x: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+/* =========================== RESET */
+.gradient{
+    background:linear-gradient(160deg, #0575e6, #021b79);
+    min-height: 100vh;
+}
+.logoFatec{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    filter: brightness(0) invert(1);
+}
+.logo{
+    width: 300px;
+    text-align: center;
+    margin: 30px auto;
+    filter: brightness(0) invert(1);
+}
+.input-professor {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.label{
+    color: white;
+    text-align: left;
+}
+#content-opcoes{
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+#content-opcoes > .opcoes {
+    width: 49%;
+    display: inline-block;
+    margin: 0px auto;
+   /* margin: calc(50vh - 100px) 0;*/
+    min-height: 200px; 
+    border: solid 1px #c8c8c8;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+#content-opcoes > .opcoes > h2{
+    font-size: 2em;
+    margin: 10px 0;
+}
+.btnAcesso{
+    padding: 10px;
+    background: linear-gradient(160deg, #0575e6, #021b79);
+    border: solid 2px #021b79;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.btnAcesso:hover{
+    background:  transparent;
+    color: #021b79;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.content{
+    padding: 10px;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+}
+.btnAgendar{
+    width: 100%;
+    background-color: #777;
+    border: solid 2px #777;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    padding: 10px;
+}
+.btnAgendar:hover{
+    background-color: transparent;
+    border: solid 2px #333;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.btnAceitar{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 49.5%;
+    margin: 10px auto;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease-in 0.2;
+}
+
+.btnRecusar{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 49.5%;
+    margin: 10px auto;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease-in 0.2;
+}
