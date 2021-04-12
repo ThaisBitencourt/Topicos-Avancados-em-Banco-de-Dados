@@ -46,5 +46,5 @@ no consentimento do titular.
 #### Modelo Entidade Relacionamento (MER)
 
 <h1 align="center">
-    <img alt="GoBarber" src="img/diagrama.jpg" width="800px"/>
+    <img alt="GoBarber" src="diagrama.jpg" width="800px"/>
 </h1>
