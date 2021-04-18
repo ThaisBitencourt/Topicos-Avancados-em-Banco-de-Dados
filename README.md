@@ -65,17 +65,17 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ### Sprint 02 
 📅 *29/03/2021 a 18/04/2021*
-Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação, feito no banco(flag menor de idade).
+-Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação, feito no banco(flag menor de idade).
 
-Integrar varredura com banco de dados (optout), iniciamos o desenvolvimento da Plataforma web integrando a Varredura de Dados Pessoais.
+-Integrar varredura com banco de dados (optout), iniciamos o desenvolvimento da Plataforma web integrando a Varredura de Dados Pessoais.
 
 ### Sprint 03 
 📅 *26/04/2021 a 16/05/2021*
-Desenvolvimento da Plataforma web , integrar ferramenta de OptOut.
+-Desenvolvimento da Plataforma web , integrar ferramenta de OptOut.
 
-Consentimento de menores de idade: integrar com a Plataforma Web, anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
+-Consentimento de menores de idade: integrar com a Plataforma Web, anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
 
-Buscador e Validador de Nome
+-Buscador e Validador de Nome
 
 ### Sprint 04
 📅 *17/05/2021 a 05/06/2021*
