@@ -57,8 +57,6 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 - Como proposta de solução para o problema mencionado acima, temos: Um modelo de Banco de Dados (SQLServer) teste chamado Northwind, juntamente com a implementação de políticas e segurança do tipo RLS (Row Level Security) e algumas alterações na tabela de dados cliente, como por exemplo, adição de um campo Flag na tabela para que seja possível registrar o atual estado de seu consentimento com relação aos tratamento de seus dados pessoais e uma tabela de histórico, contendo as datas de possíveis concessões e revogações do direito de manipular seus dados pessoais.
 
- 
-
 - Desenvolvimento do verificador em Python onde vemos a existência de dados pessoais(CPF, CNH, CNPJ, PIS, Titulo Eleitoral, CEP e Celular) em arquivos (TXT, Word e PDF), criamos uma API em Python que recebe o código e retorna através do Postman o dado encontrado.
 
 [Código em Python - verificador](https://colab.research.google.com/drive/1b9PlOG9cYDp_cd26JIMdjrgcNfHsP8Bg#scrollTo=fZUsO84VZKNc)
@@ -67,15 +65,17 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ### Sprint 02 
 📅 *29/03/2021 a 18/04/2021*
-- Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
+Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação, feito no banco(flag menor de idade).
 
-- Integrar varredura com banco de dados (optout).
+Integrar varredura com banco de dados (optout), iniciamos o desenvolvimento da Plataforma web integrando a Varredura de Dados Pessoais.
 
 ### Sprint 03 
 📅 *26/04/2021 a 16/05/2021*
-- Desenvolvimento da Plataforma web , integrar ferramenta de OptOut e Varredura de Dados Pessoais.
+Desenvolvimento da Plataforma web , integrar ferramenta de OptOut.
 
--  Buscador e Validador de Nome 
+Consentimento de menores de idade: integrar com a Plataforma Web, anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
+
+Buscador e Validador de Nome
 
 ### Sprint 04
 📅 *17/05/2021 a 05/06/2021*
