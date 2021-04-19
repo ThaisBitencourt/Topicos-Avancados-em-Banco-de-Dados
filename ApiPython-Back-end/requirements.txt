@@ -1,4 +1,4 @@
-Flask
+flask
 flask-cors
 flask-restful
 docx2txt
@@ -6,3 +6,4 @@ validate-docbr
 pycep-correios
 phonenumbers
 textract
+pyodbc

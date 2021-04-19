@@ -15,6 +15,7 @@ import pycep_correios
 import phonenumbers
 import textract
 import os
+from person import Person
 
 def validate_cpf(doc):
     cpf = CPF()
@@ -58,7 +59,8 @@ def validate_cep(cep):
 
 def verificacoes(texto):
   lines = texto.split('\n')
-  returnMsg = 'Validados: '
+  people = []
+  person = Person()
 
   for line in lines:
     for word in line.split(' '):
@@ -66,31 +68,49 @@ def verificacoes(texto):
         word = word.strip()
 
         if validate_cpf(word):
-          returnMsg = returnMsg + ", tem cpf"
+          if person.cpf :
+            people.append(person)
+            people = people[:]
+            person = Person()
+          elif person.cnpj:
+            people.append(person)
+            people = people[:]
+            person = Person()
+          person.cpf = word
 
         if len(word) == 9:
           endereco = validate_cep(word)
 
           if endereco:
-            returnMsg = returnMsg + ", tem cep"
+            person.cep = word
+            person.endereco = endereco
 
         if validate_celular(word):
-          returnMsg = returnMsg + ", tem celular"
+          person.celular = word
 
         if validate_cnh(word):
-          returnMsg = returnMsg + ", tem cnh"
+          person.cnh = word
 
         if validate_cnpj(word):
-          returnMsg = returnMsg + ", tem cnpj"
+          if person.cnpj:
+            people.append(person)
+            people = people[:]
+            person = Person()
+          elif person.cpf:
+            people.append(person)
+            people = people[:]
+            person = Person()
+          person.cnpj = word
 
         if validate_pis(word):
-          returnMsg = returnMsg + ", tem pis"
+          person.pis = word
 
         if validate_titulo(word):
-          returnMsg = returnMsg + ", tem titulo"
+          person.titulo = word
       except:
         continue
-  return returnMsg
+  people.append(person)
+  return people
 
 def verificar_docx(arquivo):
   result = docx2txt.process(arquivo)
@@ -108,20 +128,21 @@ def verificar_pdf(arquivo):
 def verificar_documento(arquivo):
   arquivo_partes = arquivo.split('.')
   ext = arquivo_partes[len(arquivo_partes)-1]
-  msg = ''
+  people = None
   
   if os.path.isfile(arquivo):
     print("Verificando -- " + arquivo)
     if ext.lower() == 'txt':
-      msg = verificar_txt(arquivo)
+      people = verificar_txt(arquivo)
     elif ext.lower() == 'pdf':
-      msg = verificar_pdf(arquivo)
+      people = verificar_pdf(arquivo)
     elif ext.lower() == 'docx':
-      msg = verificar_docx(arquivo)
+      people = verificar_docx(arquivo)
     else:
       return 'Tipo inválido'
-      
-    return msg
+    
+
+    return people
   else:
     return 'Arquivo não encontrado.'
 
