@@ -45,12 +45,12 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ## Entregas
 
-### Kick Off 
+### Kick Off ✔
 📅 *28/02/2021 a 06/03/2021*
 
 - Definição das User Stories , Tasks e Tecnologias que serão utilizadas.
 
-### Sprint 01 
+### Sprint 01 ✔
 📅 *08/03/2021 a 28/03/2021*
 
 ##### Banco de Dados SQL Server - Gestão de OptIn e OptOut - [DOCUMENTAÇÃO](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/banco/sprint1/README.md) 
@@ -63,7 +63,7 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 [API - verificador](https://github.com/ThiagoDisk/APIPython)
 
-### Sprint 02 
+### Sprint 02 ✔
 📅 *29/03/2021 a 18/04/2021*
 
 - Consentimento de menores de idade: anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação, feito no banco(flag menor de idade) - [DOCUMENTAÇÃO](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/banco/sprint2/README.md)
