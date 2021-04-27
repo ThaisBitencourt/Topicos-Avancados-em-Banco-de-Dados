@@ -11,14 +11,14 @@
 
 ## Equipe
 
-- 👩‍💻 [Giovanna Xavier](https://https://github.com/giovannaxavierm/)
-- 👨‍💻 [Hercules Pereira](https://github.com/herculespsilva/)
+- 👩‍💻 [Giovanna Xavier](https://www.linkedin.com/in/giovanna-xavier-matos-975538156/)
+- 👨‍💻 [Hercules Pereira](https://www.linkedin.com/in/hercules-pereira/)
 - 👩‍💻 [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/)
-- 👨‍💻 [Sandro Toline](https://github.com/sandrotoline/)
+- 👨‍💻 [Sandro Toline](https://www.linkedin.com/in/sandro-toline-149997115/)
 - 👩‍💻 [Thaís Bitencourt de Meneses](https://www.linkedin.com/in/thaisbitencourt/)
-- 👨‍💻 [Thiago Dias](https://github.com/ThiagoDisk/)
+- 👨‍💻 [Thiago Dias](https://www.linkedin.com/in/thiago-dias-19919616b/)
 - 👨‍💻 [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/)
-- 👨‍💻 [Victor Cardial](https://github.com/VictorCardial/)
+- 👨‍💻 [Victor Cardial](https://www.linkedin.com/in/victor-cardial-de-menezes-pereira-67491018a/)
 
 ### Matéria: Tópicos Avançados de Banco de Dados
 ### Professor: Eduardo Sakaue
