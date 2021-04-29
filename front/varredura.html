@@ -22,13 +22,30 @@
 
             $('#btnVarrer').click(function () {
                 $.ajax({
-                    url: 'http://localhost:5000/helloworld', // Url do lado server que vai receber o arquivo
+                    url: 'http://localhost:5000/validatefile', // Url do lado server que vai receber o arquivo
                     data: form,
                     processData: false,
                     contentType: false,
                     type: 'POST',
                     success: function (data) {
-                        alert(data)
+                        arr = data["resultData"];
+                        for (let i = 0; i < data["resultData"].length; i++) {
+                             val = arr[i];
+                            
+                             retorno = "";
+                             retorno = retorno + " celular: " + val.celular;
+                             retorno = retorno + " cep: " + val.cep;
+                             retorno = retorno + " cnh:" + val.cnh;
+                             retorno = retorno + " cnpj: " + val.cnpj;
+                             retorno = retorno + " cpf:  " + val.cpf;
+                             retorno = retorno + " endereco:  " + val.endereco;
+                             retorno = retorno + " flagAutorizacao:  " + val.flagAutorizacao;
+                             retorno = retorno + " flagMenor:  " + val.flagMenor;
+                             retorno = retorno + " pis:  " + val.pis;
+                             retorno = retorno + " titulo:  " + val.titulo;
+
+                             alert(retorno);
+                        }
                     }
                 });
             });

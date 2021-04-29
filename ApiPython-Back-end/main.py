@@ -15,14 +15,16 @@ api = Api(app)
 class ValidateFile(Resource):
     def db_validate(self, people):
         conn = pyodbc.connect('Driver={SQL Server};'
-                              'Server=GLADOS\MSSQLSERVER01;'
+                              'Server=GDYLQX2;'
                               'Database=Northwind;'
                               'Trusted_Connection=yes;')
 
         for person in people: 
             cursor = conn.cursor()
-            row = cursor.execute('SELECT * FROM People where CPF = ' +person.cpf).fetchone()
-            person.flagAutorizacao = row.flag_documento
+            row = cursor.execute('SELECT * FROM People where CPF = ' + person.cpf).fetchone()
+            print(row)
+            if row:
+                person.flagAutorizacao = row.flag_documento
             print(row)
         
         return [person.serialize() for person in people]
