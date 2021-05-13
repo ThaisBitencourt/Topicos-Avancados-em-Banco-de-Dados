@@ -11,14 +11,14 @@
 
 ## Equipe
 
-- 👩‍💻 [Giovanna Xavier](https://www.linkedin.com/in/giovanna-xavier-matos-975538156/) - Dev
-- 👨‍💻 [Hercules Pereira](https://www.linkedin.com/in/hercules-pereira/) - Dev
-- 👩‍💻 [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/) - Scrum Master
-- 👨‍💻 [Sandro Toline](https://www.linkedin.com/in/sandro-toline-149997115/) - Dev
-- 👩‍💻 [Thaís Bitencourt de Meneses](https://www.linkedin.com/in/thaisbitencourt/) - Product Owner
-- 👨‍💻 [Thiago Dias](https://www.linkedin.com/in/thiago-dias-19919616b/) - Dev
-- 👨‍💻 [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/) - Dev
-- 👨‍💻 [Victor Cardial](https://www.linkedin.com/in/victor-cardial-de-menezes-pereira-67491018a/) - Dev
+- 👩‍💻 [Giovanna Xavier](https://www.linkedin.com/in/giovanna-xavier-matos-975538156/) : _Dev_
+- 👨‍💻 [Hercules Pereira](https://www.linkedin.com/in/hercules-pereira/) : _Dev_
+- 👩‍💻 [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/) : _Scrum Master_
+- 👨‍💻 [Sandro Toline](https://www.linkedin.com/in/sandro-toline-149997115/) : _Dev_
+- 👩‍💻 [Thaís Bitencourt de Meneses](https://www.linkedin.com/in/thaisbitencourt/) : _Product Owner_
+- 👨‍💻 [Thiago Dias](https://www.linkedin.com/in/thiago-dias-19919616b/) : _Dev_
+- 👨‍💻 [Yan Rodrigues de Azevedo](https://www.linkedin.com/in/yan-rodrigues/) : _Dev_
+- 👨‍💻 [Victor Cardial](https://www.linkedin.com/in/victor-cardial-de-menezes-pereira-67491018a/) : _Dev_
 
 ### Matéria: Tópicos Avançados de Banco de Dados
 ### Professor: Eduardo Sakaue
