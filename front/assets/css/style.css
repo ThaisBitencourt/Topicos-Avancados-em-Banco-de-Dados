@@ -32,7 +32,7 @@ body{
     text-align: left;
 }
 #content-opcoes{
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -40,7 +40,7 @@ body{
 #content-opcoes > .opcoes {
     width: 49%;
     display: inline-block;
-    margin: 0px auto;
+    margin: 7px 3px;
    /* margin: calc(50vh - 100px) 0;*/
     min-height: 200px; 
     border: solid 1px #c8c8c8;
@@ -89,7 +89,7 @@ body{
 .btnAgendar{
     width: 100%;
     background-color: #777;
-    border: solid 2px #777;
+    border: solid 1px #777;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -119,8 +119,8 @@ body{
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    width: 49.5%;
-    margin: 10px auto;
+    width: 48.5%;
+    margin: 5px 3px;
     border:none;
     font-weight: bold;
     cursor: pointer;
@@ -135,11 +135,29 @@ body{
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    width: 49.5%;
-    margin: 10px auto;
+    width: 48.5%;
+    margin: 5px 3px;
     border:none;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
     transition: all ease-in 0.2;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-link{
+    padding: 2px 8px;
+    font-size: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 8px;
+    color: #000;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 0 4px 4px;
 }
