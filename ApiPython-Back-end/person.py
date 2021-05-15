@@ -1,4 +1,5 @@
 class Person:
+  nome = None
   cpf = None
   cnh = None
   cnpj = None
@@ -11,6 +12,7 @@ class Person:
   flagMenor = None
   def serialize(self):
       return {
+          'nome':self.nome,
           'cpf': self.cpf, 
           'cnh': self.cnh,
           'cnpj': self.cnpj,

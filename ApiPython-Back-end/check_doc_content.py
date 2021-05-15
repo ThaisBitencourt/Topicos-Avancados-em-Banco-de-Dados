@@ -14,8 +14,24 @@ import re
 import pycep_correios
 import phonenumbers
 import textract
+import pyodbc
 import os
 from person import Person
+
+def check_name(nome):
+  conn = pyodbc.connect('Driver={SQL Server};'
+                    'Server=GDYLQX2;'
+                    'Database=Northwind;'
+                    'Trusted_Connection=yes;')
+
+  cursor = conn.cursor()
+  row = cursor.execute("SELECT * FROM Customers where Name like '%{0}%'".format(nome)).fetchone()
+
+  if row:
+    print(row)
+    return True
+
+  return False
 
 def validate_cpf(doc):
     cpf = CPF()
@@ -66,6 +82,9 @@ def verificacoes(texto):
     for word in line.split(' '):
       try:
         word = word.strip()
+
+        if check_name(word):
+          person.nome = word
 
         if validate_cpf(word):
           if person.cpf :
