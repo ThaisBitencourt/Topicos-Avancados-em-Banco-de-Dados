@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+from os import error
+from flask import Flask, jsonify, request, abort
 from flask_cors import CORS, cross_origin
 from flask_restful import Api, Resource, reqparse
 import werkzeug
@@ -21,7 +22,7 @@ class ValidateFile(Resource):
 
         for person in people: 
             cursor = conn.cursor()
-            row = cursor.execute('SELECT * FROM People where CPF = ' + person.cpf).fetchone()
+            row = cursor.execute("EXECUTE AS USER = 'app';  SELECT * FROM People where CPF = " + person.cpf + "'").fetchone()
             print(row)
             if row:
                 person.flagAutorizacao = row.flag_documento
@@ -40,7 +41,38 @@ class ValidateFile(Resource):
         
         
 
+class Acao(Resource):
+    @cross_origin()
+    def post(self):
+        conn = pyodbc.connect('Driver={SQL Server};'
+                              'Server=GLADOS\MSSQLSERVER01;'
+                              'Database=Northwind;'
+                              'Trusted_Connection=yes;')
+        cursor = conn.cursor() 
+        parser = reqparse.RequestParser()
+        parser.add_argument('cpf', type=str, required=True, help="Insira um CPF para alterar ou verificar o status da autorização.")
+        parser.add_argument('acao', type=str)
+        args = parser.parse_args()
+        cpf = args['cpf']
+        acao = args['acao']
+        if(acao == 'optin'):
+            cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET flag_documento = 1 WHERE CPF = '"+ cpf +"';")
+            conn.commit()
+
+        elif(acao == 'optout'):
+            cursor.execute("EXECUTE AS USER = 'app';  UPDATE dbo.People SET flag_documento = 0 WHERE CPF = '"+ cpf +"';")
+            conn.commit()
+            
+        row = cursor.execute("EXECUTE AS USER = 'app';  SELECT * FROM People where CPF = '" + cpf + "'").fetchone()
+
+        if row:
+            return jsonify({'resultData':{'flag':row.flag_documento}})
+
+        else:
+            return jsonify({'error':True, 'msg':'CPF não cadastrado'})
+
 api.add_resource(ValidateFile, "/validatefile")
+api.add_resource(Acao, "/changeflag")
 
 if __name__ == "__main__":
     app.run(debug=True)
