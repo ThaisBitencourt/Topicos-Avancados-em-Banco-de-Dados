@@ -23,7 +23,7 @@ class ValidateFile(Resource):
             cursor = conn.cursor()
             row = None
             if person.cpf:
-                row = cursor.execute('SELECT * FROM People where CPF = ' + person.cpf).fetchone()
+                row = cursor.execute('SELECT * FROM People where CPF = ' + "'" + person.cpf + "'").fetchone()
                 print(row)
             if row:
                 person.flagAutorizacao = row.flag_documento
