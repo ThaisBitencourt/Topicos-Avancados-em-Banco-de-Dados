@@ -161,3 +161,40 @@ body{
     line-height: 20px;
     padding: 0 4px 4px;
 }
+
+.table {
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    border-spacing: 0 4px;
+    border-collapse: separate;
+}
+
+.table tr td, .table tr th {
+    text-align: center;
+    padding: 8px;
+}
+
+.table tr th {
+    font-weight: bold;
+    border-bottom: 2px solid#e9e9e9;
+}
+
+.table tr {
+    border: transparent;
+}
+
+.table tr td.errorTxt {
+    font-weight: bold;
+    color: #C52233;
+}
+
+.table tr td.successTxt {
+    font-weight: bold;
+    color: #3C896D;
+}
+
+.table tr td.warningTxt {
+    font-weight: bold;
+    color: #FF9F1C;
+}

@@ -28,24 +28,47 @@
                     contentType: false,
                     type: 'POST',
                     success: function (data) {
-                        arr = data["resultData"];
-                        for (let i = 0; i < data["resultData"].length; i++) {
-                             val = arr[i];
-                            
-                             retorno = "";
-                             retorno = retorno + " celular: " + val.celular;
-                             retorno = retorno + " cep: " + val.cep;
-                             retorno = retorno + " cnh:" + val.cnh;
-                             retorno = retorno + " cnpj: " + val.cnpj;
-                             retorno = retorno + " cpf:  " + val.cpf;
-                             retorno = retorno + " endereco:  " + val.endereco;
-                             retorno = retorno + " flagAutorizacao:  " + val.flagAutorizacao;
-                             retorno = retorno + " flagMenor:  " + val.flagMenor;
-                             retorno = retorno + " pis:  " + val.pis;
-                             retorno = retorno + " titulo:  " + val.titulo;
+                        const resultData = data["resultData"];
+                        $('#resultArea').empty();
+                        let table = `
+                        <table class="table">
+                            <tr>
+                                <th>CPF/CNPJ</th>
+                                <th>NOME</th>
+                                <th>CEP</th>
+                                <th>CNH</th>
+                                <th>PIS</th>
+                                <th>TITULO</th>
+                                <th>AUTORIZAÇÃO</th>
+                            </tr>
+                        `;
 
-                             alert(retorno);
-                        }
+                        resultData.forEach(data => {
+                            table += `
+                                <tr>
+                                    <td>${data.cpf ? data.cpf : data.cnpj ? data.cnpj : '-'}</td>
+                                    <td>${data.nome ? data.nome : '-'}</td>
+                                    <td>${data.cep ? data.cep : '-'}</td>
+                                    <td>${data.cnh ? data.cnh : '-'}</td>
+                                    <td>${data.pis ? data.pis : '-'}</td>
+                                    <td>${data.titulo ? data.titulo : '-'}</td>
+                                    <td class="
+                                        ${
+                                            data.flagAutorizacao === null ? 'errorTxt' :
+                                            data.flagAutorizacao ? 'successTxt' : 'warningTxt'
+                                        }
+                                    ">
+                                        ${
+                                            data.flagAutorizacao === null ? 'Não Cadastrado' :
+                                            data.flagAutorizacao ? 'Autorizado' : 'Revogado'
+                                        }
+                                    </td>
+                                </tr>
+                            `;
+                        });
+
+                        table += '</table>';
+                        $('#resultArea').append(table);
                     }
                 });
             });
@@ -66,17 +89,20 @@
                     <div class="professor">
                         <h2 style="color: white;">Varredura</h2>
                         <div class="row">
-                        <div class="col-md-12" style="text-align: left;">
-                            <label for="lblEmail" class="label">Documento:</label>
-                            <input type="file" id="file" name="file" class="input-professor" style="background: white" />               
+                            <div class="col-md-12" style="text-align: left;">
+                                <label for="lblEmail" class="label">Documento:</label>
+                                <input type="file" id="file" name="file" class="input-professor" style="background: white" />               
+                            </div>
+                            <div class="col-md-12" style="text-align: left;">
+                                <button id="btnVarrer" class="btnAgendar">Varrer</button>
+                            </div>      
                         </div>
-                        <div class="col-md-12" style="text-align: left;">
-                           <button id="btnVarrer" class="btnAgendar">Varrer</button>
-                        </div>      
+                        <div class="row">
+                            <div class="col-md-12" id="resultArea"></div>
+                        </div>
                     </div>
             </div>
         </div>
-    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
