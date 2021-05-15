@@ -19,10 +19,14 @@ import os
 from person import Person
 
 def check_name(nome):
-  conn = pyodbc.connect('Driver={SQL Server};'
-                    'Server=GDYLQX2;'
-                    'Database=Northwind;'
-                    'Trusted_Connection=yes;')
+
+  if len(nome) < 3:
+    return False
+
+  conn = pyodbc.connect('Driver={SQL Server Native Client 11.0};'
+                        'Server=localhost;'
+                        'Database=Northwind;'
+                        'Trusted_Connection=yes;')
 
   cursor = conn.cursor()
   row = cursor.execute("SELECT * FROM Customers where Name like '%{0}%'".format(nome)).fetchone()

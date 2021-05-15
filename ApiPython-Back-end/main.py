@@ -14,15 +14,17 @@ api = Api(app)
 
 class ValidateFile(Resource):
     def db_validate(self, people):
-        conn = pyodbc.connect('Driver={SQL Server};'
-                              'Server=GDYLQX2;'
+        conn = pyodbc.connect('Driver={SQL Server Native Client 11.0};'
+                              'Server=localhost;'
                               'Database=Northwind;'
                               'Trusted_Connection=yes;')
 
         for person in people: 
             cursor = conn.cursor()
-            row = cursor.execute('SELECT * FROM People where CPF = ' + person.cpf).fetchone()
-            print(row)
+            row = None
+            if person.cpf:
+                row = cursor.execute('SELECT * FROM People where CPF = ' + person.cpf).fetchone()
+                print(row)
             if row:
                 person.flagAutorizacao = row.flag_documento
             print(row)
