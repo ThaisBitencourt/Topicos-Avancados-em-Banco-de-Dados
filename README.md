@@ -11,7 +11,7 @@
 
 ## Equipe
 
-- 👩‍💻 [Giovanna Xavier](https://www.linkedin.com/in/giovanna-xavier-matos-975538156/) : _Dev_
+- 👩‍💻 [Giovanna Xavier](https://www.linkedin.com/in/giovanna-xavier-975538156/) : _Dev_
 - 👨‍💻 [Hercules Pereira](https://www.linkedin.com/in/hercules-pereira/) : _Dev_
 - 👩‍💻 [Leticia Macedo Prudente de Carvalho](https://www.linkedin.com/mwlite/in/leticia-macedo-prudente-de-carvalho-a0413416a/) : _Scrum Master_
 - 👨‍💻 [Sandro Toline](https://www.linkedin.com/in/sandro-toline-149997115/) : _Dev_
