@@ -70,7 +70,7 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 - Integrar varredura com banco de dados (optout), iniciamos o desenvolvimento da Plataforma web integrando a Varredura de Dados Pessoais.
 
-### Sprint 03 
+### Sprint 03 ✔
 📅 *26/04/2021 a 16/05/2021*
 
 - Desenvolvimento da Plataforma web , integrar ferramenta de OptOut.
@@ -81,10 +81,11 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 ### Sprint 04
 📅 *17/05/2021 a 05/06/2021*
-- Verificar lista de disparo de e-mail marketing 
+- Vincular cadastro de Menor de Idade com cadastro do Responsável.
 
-- Durante a varredura de dados pessoais, cruzar os dados com a flag de consentimento, para verificar documentos que não estão autorizados.
+- Gerar lista de e-mail marketing (autorizados).
 
+- Desenvolver documentação técnica e de usabilidade da ferramenta.
 
 ### Apresentação Final 
 📅 *07/06/2021 a 11/06/2021*
