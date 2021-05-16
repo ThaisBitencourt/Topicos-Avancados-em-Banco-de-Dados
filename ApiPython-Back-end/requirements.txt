@@ -7,3 +7,4 @@ pycep-correios
 phonenumbers
 textract
 pyodbc
+cloudinary
