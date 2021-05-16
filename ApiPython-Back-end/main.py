@@ -1,7 +1,9 @@
-from os import error
+import os
+import cloudinary as cloudinary
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS, cross_origin
 from flask_restful import Api, Resource, reqparse
+import cloudinary.uploader
 import werkzeug
 import pyodbc
 from check_doc_content import verificar_documento
@@ -46,22 +48,43 @@ class ValidateFile(Resource):
 class Acao(Resource):
     @cross_origin()
     def post(self):
-        conn = pyodbc.connect('Driver={SQL Server};'
-                              'Server=GLADOS\MSSQLSERVER01;'
+        conn = pyodbc.connect('Driver={SQL Server Native Client 11.0};'
+                              'Server=localhost;'
                               'Database=Northwind;'
                               'Trusted_Connection=yes;')
         cursor = conn.cursor() 
         parser = reqparse.RequestParser()
         parser.add_argument('cpf', type=str, required=True, help="Insira um CPF para alterar ou verificar o status da autorização.")
         parser.add_argument('acao', type=str)
+        parser.add_argument('emancipado', type=bool)
+        parser.add_argument('file', type=werkzeug.datastructures.FileStorage, location='files')
         args = parser.parse_args()
         cpf = args['cpf']
         acao = args['acao']
+        emancipado = args['emancipado']
         if(acao == 'optin'):
+            if (emancipado):
+                cloudinary.config(cloud_name='dhrv1rlbn', api_key='646476471328262',
+                                api_secret='r6ajics1Nskx_53e7AZhxYKlP2Q')
+                upload_result = None
+                file_to_upload = args['file']
+                if file_to_upload:
+                    upload_result = cloudinary.uploader.upload(file_to_upload)
+                    print(file_to_upload)
+                    print(upload_result["url"])
             cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET flag_documento = 1 WHERE CPF = '"+ cpf +"';")
             conn.commit()
 
         elif(acao == 'optout'):
+            if (emancipado):
+                cloudinary.config(cloud_name='dhrv1rlbn', api_key='646476471328262',
+                                api_secret='r6ajics1Nskx_53e7AZhxYKlP2Q')
+                upload_result = None
+                file_to_upload = args['file']
+                if file_to_upload:
+                    upload_result = cloudinary.uploader.upload(file_to_upload)
+                    print(file_to_upload)
+                    print(upload_result["url"])
             cursor.execute("EXECUTE AS USER = 'app';  UPDATE dbo.People SET flag_documento = 0 WHERE CPF = '"+ cpf +"';")
             conn.commit()
         
