@@ -165,7 +165,7 @@ BEGIN
 
 	DECLARE @CustomerID INT,
 			@BirthDate DATE,
-			@Documento VARBINARY(MAX),
+			@Documento VARCHAR(MAX), --VARBINARY
 			@Responsavel INT,
 			@Flag_documento BIT
 
