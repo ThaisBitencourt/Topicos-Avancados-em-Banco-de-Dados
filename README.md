@@ -75,7 +75,7 @@ Também considerando ao que se refere a menores de idade, a Lei “O tratamento 
 
 - Desenvolvimento da Plataforma web , integrar ferramenta de OptOut.
 
-- Consentimento de menores de idade: integrar com a Plataforma Web, anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação.
+- Consentimento de menores de idade: integrar com a Plataforma Web, anexar autorização dos pais ou responsável legal ou documento comprovante de emancipação - [DOCUMENTAÇÃO](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/banco/sprint3/README.md)
 
 - Buscador e Validador de Nome
 
