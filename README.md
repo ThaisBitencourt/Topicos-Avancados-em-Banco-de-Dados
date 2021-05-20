@@ -3,11 +3,11 @@
 ## Índice
 
 -  [Entregas](#entregas)
-    - [Kick Off](#kick-off) - 28/02/2021 a 06/03/2021 
+    - [Kick Off ✔](#kick-off) - 28/02/2021 a 06/03/2021 
     - [Sprint 01](#sprint-01) – 08/03/2021 a 28/03/2021
-    - [Sprint 02](#sprint-02) - 29/03/2021 a 18/04/2021
-    - [Sprint 03](#sprint-03)  - 26/04/2021 a 16/05/2021
-    - [Sprint 04](#sprint-04) - 17/05/2021 a 05/06/2021
+    - [Sprint 02 ✔](#sprint-02) - 29/03/2021 a 18/04/2021
+    - [Sprint 03 ✔](#sprint-03)  - 26/04/2021 a 16/05/2021
+    - [Sprint 04 ✔](#sprint-04) - 17/05/2021 a 05/06/2021
 
 ## Equipe
 
