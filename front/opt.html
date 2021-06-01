@@ -23,17 +23,31 @@
             });
 
             $('#switch').change(function (event) {
+            	$('.content-choice').toggle("slow");
                 if (this.checked) {
-                    $('#file').removeAttr('hidden');
                     emancipado = true;
                 } else {
-                    $('#file').attr('hidden', true);
                     file = undefined;
                     $('#file').val('');
                     emancipado = false;
                 }
             });
 
+            $('#emancipacao').click(function(){
+				$(this).closest('.choice').addClass('selected');
+				$('#cpfResponsavel').removeClass('selected');
+				$('#file').removeAttr('hidden',1000);
+				$('#cpfpais').attr('hidden', true);
+			});
+  			$('#cpfResponsavel').click(function(){
+				$(this).closest('.choice').addClass('selected');
+				$('#emancipacao').removeClass('selected');
+				$('#cpfpais').removeAttr('hidden',1000);
+				$('#file').attr('hidden', true);
+				
+			});
+
+            $()
             $('#btnVerificar').click(function () {
                 const cpf = $('#cpf').val();
                 form = new FormData();
@@ -132,14 +146,14 @@
     </div>
     <div class="container" style="margin: 10px auto;">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-8 offset-md-2">
                 <div class="professor">
                     <div class="row">
                         <div class="col-md-12" style="text-align: left;">
                             <div class="row">
                                 <div class="col-md-9">
                                     <label for="lblEmail" class="label">CPF/CNPJ:</label>
-                                    <input id="cpf" type="text" class="input-professor">
+                                    <input id="cpfcnpj" type="text" class="input-professor">
                                 </div>
                                 <div class="col-md-3" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                     <label for="lbl" class="label">MENOR DE IDADE</label>
@@ -149,7 +163,24 @@
                                     </label>
                                 </div>
                             </div>
-                            <input type="file" id="file" name="file" class="input-professor" style="background: white; margin-top: 8px;" hidden/>  
+                            <div class="content-choice">
+                            	<h2 style="color: white;margin: 10px 0">Vincular: </h2>
+	                            <div class="choice" id="emancipacao">
+	                            	<img src="assets/img/document.png" alt="">
+	                            	<p style="color:white">Arquivo Emancipação</p>
+	                            </div>
+	                            
+	                            <div class="choice" id="cpfResponsavel">
+	                            	<img src="assets/img/cpf.png" alt="">
+	                            	<p style="color:white">CPF Responsável</p>
+	                            </div>
+	                            
+                            </div>
+                            <input type="file" id="file" name="file" class="input-professor" style="background: white; margin-top: 8px;" hidden/>
+                            <div id="cpfpais" hidden>
+                             <label for="lblEmail" class="label">CPF Responsável:</label>
+                             <input id="cpf" type="text" class="input-professor"> 
+                            </div>
                             <button class="btnAgendar" id="btnVerificar">Verificar Permissão Atual</button>
                             <button class="btnAceitar" id="btnOptIn">OptIn</button>
                             <button class="btnRecusar" id="btnOptOut">OptOut</button>
@@ -160,6 +191,34 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>	<script>
+		$(document).ready(function(){
+		    $('#cpf').mask('000.000.000-00');
+			$("#cpfcnpj").keydown(function(){
+		    try {
+		        $("#cpfcnpj").unmask();
+		    } catch (e) {}
 
+		    var tamanho = $("#cpfcnpj").val().length;
+
+		    if(tamanho < 11){
+		        $("#cpfcnpj").mask("999.999.999-99");
+		    } else {
+		        $("#cpfcnpj").mask("99.999.999/9999-99");
+		    }
+
+		    // ajustando foco
+		    var elem = this;
+		    setTimeout(function(){
+		        // mudo a posição do seletor
+		        elem.selectionStart = elem.selectionEnd = 10000;
+		    }, 0);
+		    // reaplico o valor para mudar o foco
+		    var currentValue = $(this).val();
+		    $(this).val('');
+		    $(this).val(currentValue);
+		});
+		});
+	</script>
 </body>
 </html>

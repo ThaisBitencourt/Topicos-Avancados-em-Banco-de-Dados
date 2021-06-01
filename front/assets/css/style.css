@@ -261,3 +261,28 @@ body{
   .slider.round:before {
     border-radius: 50%;
   }
+.choice {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    filter: grayscale(1);
+    transition:all .4s;
+    cursor:pointer;
+}
+.choice:hover{
+   filter: grayscale(0);
+   transition: all .4s;
+}  
+.selected{
+  filter: grayscale(0) !important;
+}
+.choice > img{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.content-choice{
+text-align: center;
+display:none;
+}
