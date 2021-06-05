@@ -1,10 +1,12 @@
 ## Manual para preparação de ambiente para API Python
 
 Para utilização do projeto é necessario a instalação do Python 3.8 ou superior.
+![](imgs/img3.jpg?raw=true)
 
 Link: https://www.python.org/downloads/
 
 É ideal também que se utilize uma IDE (Ambiente Integral de Desenvolvimento) para preparação do ambiente e execução dos scripts.
+![](imgs/img4.png?raw=true)
 
 Link: https://www.jetbrains.com/pycharm/download/#section=windows
 
