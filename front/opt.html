@@ -17,6 +17,7 @@
 
             var file;
             var emancipado = false;
+            var responsavel = false;
             $('#file').change(function (event) {
                 file = event.target.files[0] // para apenas 1 arquivo
                 //var name = event.target.files[0].content.name; // para capturar o nome do arquivo com sua extenção
@@ -24,12 +25,11 @@
 
             $('#switch').change(function (event) {
             	$('.content-choice').toggle("slow");
-                if (this.checked) {
-                    emancipado = true;
-                } else {
+                if (!this.checked) {
+                    emancipado = false;
+                    responsavel = false;
                     file = undefined;
                     $('#file').val('');
-                    emancipado = false;
                 }
             });
 
@@ -38,18 +38,23 @@
 				$('#cpfResponsavel').removeClass('selected');
 				$('#file').removeAttr('hidden',1000);
 				$('#cpfpais').attr('hidden', true);
+				$('#parentescopais').attr('hidden', true);
+                emancipado = true;
+                responsavel = false;
 			});
   			$('#cpfResponsavel').click(function(){
 				$(this).closest('.choice').addClass('selected');
 				$('#emancipacao').removeClass('selected');
 				$('#cpfpais').removeAttr('hidden',1000);
+				$('#parentescopais').removeAttr('hidden',1000);
 				$('#file').attr('hidden', true);
-				
+				emancipado = false;
+                responsavel = true;
 			});
 
             $()
             $('#btnVerificar').click(function () {
-                const cpf = $('#cpf').val();
+                const cpf = $('#cpfcnpj').val();
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'verificar');
@@ -75,11 +80,13 @@
             });
 
             $('#btnOptIn').click(function () {
-                const cpf = $('#cpf').val();
+                let cpf = $('#cpfcnpj').val();
+                cpf = cpf.replace(/[^0-9]/g, '');
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'optin');
                 form.append('emancipado', emancipado);
+                form.append('responsavel', responsavel);
                 if (emancipado) {
                     if (file) {
                         form.append('file', file);
@@ -87,6 +94,25 @@
                         alert('Arquivo de emancipação obrigatório!');
                         return;
                     }
+                }
+                if (responsavel) {
+                    let cpfresp = $('#cpfresp').val();
+                    const parentesco = $('#parentesco').val();
+                    if (cpfresp) {
+                        cpfresp = cpfresp.replace(/[^0-9]/g, '');
+                        form.append('cpfResponsavel', cpfresp);
+                    } else {
+                        alert('CPF do Responsável obrigatório!');
+                        return;
+                    }
+
+                    if (parentesco) {
+                        form.append('parentesco', parentesco);
+                    } else {
+                        alert('Parentesco é obrigatório!');
+                        return;
+                    }
+
                 }
                 $.ajax({
                     url: 'http://localhost:5000/changeflag', // Url do lado server que vai receber o arquivo
@@ -106,11 +132,13 @@
             });
 
             $('#btnOptOut').click(function () {
-                const cpf = $('#cpf').val();
+                let cpf = $('#cpfcnpj').val();
+                cpf = cpf.replace(/[^0-9]/g, '');
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'optout');
                 form.append('emancipado', emancipado);
+                form.append('responsavel', responsavel);
                 if (emancipado) {
                     if (file) {
                         form.append('file', file);
@@ -118,6 +146,25 @@
                         alert('Arquivo de emancipação obrigatório!');
                         return;
                     }
+                }
+                if (responsavel) {
+                    let cpfresp = $('#cpfresp').val();
+                    const parentesco = $('#parentesco').val();
+                    if (cpfresp) {
+                        cpfresp = cpfresp.replace(/[^0-9]/g, '');
+                        form.append('cpfResponsavel', cpfresp);
+                    } else {
+                        alert('CPF do Responsável obrigatório!');
+                        return;
+                    }
+
+                    if (parentesco) {
+                        form.append('parentesco', parentesco);
+                    } else {
+                        alert('Parentesco é obrigatório!');
+                        return;
+                    }
+
                 }
                 $.ajax({
                     url: 'http://localhost:5000/changeflag', // Url do lado server que vai receber o arquivo
@@ -179,7 +226,15 @@
                             <input type="file" id="file" name="file" class="input-professor" style="background: white; margin-top: 8px;" hidden/>
                             <div id="cpfpais" hidden>
                              <label for="lblEmail" class="label">CPF Responsável:</label>
-                             <input id="cpf" type="text" class="input-professor"> 
+                             <input id="cpfresp" type="text" class="input-professor"> 
+                            </div>
+                            <div id="parentescopais" hidden>
+                                <label for="lblEmail" class="label">Parentesco:</label>
+                                <select id="parentesco" class="input-professor"> 
+                                    <option value="1">Responsável Legal</option>
+                                    <option value="2">Mãe</option>
+                                    <option value="3">Pai</option>
+                                </select>
                             </div>
                             <button class="btnAgendar" id="btnVerificar">Verificar Permissão Atual</button>
                             <button class="btnAceitar" id="btnOptIn">OptIn</button>
@@ -193,7 +248,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>	<script>
 		$(document).ready(function(){
-		    $('#cpf').mask('000.000.000-00');
+		    $('#cpfresp').mask('000.000.000-00');
 			$("#cpfcnpj").keydown(function(){
 		    try {
 		        $("#cpfcnpj").unmask();
