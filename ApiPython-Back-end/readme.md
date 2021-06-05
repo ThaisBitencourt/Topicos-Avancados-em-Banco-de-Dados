@@ -12,14 +12,15 @@ Após a realização dos downloads mencionados, é preciso executar os seguintes
 
 No diretorio onde se encontra o arquivo requirements.txt
 
-![](imgs/img1.png?raw=true)
+![](imgs/img1.PNG?raw=true)
 
 -     pip install -r requirements.txt
 
 Após a execução do pip intall, todas as dependencias necessárias para o projeto e será apresentando uma mensagem confirmando a instalação.
 
-![](imgs/img2.png?raw=true)
+![](imgs/img2.PNG?raw=true)
 
+Agora é possivel acessar o projeto através do link http://127.0.0.1:5000/
 
 
 
