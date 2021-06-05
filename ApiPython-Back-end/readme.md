@@ -12,13 +12,13 @@ Após a realização dos downloads mencionados, é preciso executar os seguintes
 
 No diretorio onde se encontra o arquivo requirements.txt
 
-![](imgs/img1.png)
+![](imgs/img1.png?raw=true)
 
 -     pip install -r requirements.txt
 
 Após a execução do pip intall, todas as dependencias necessárias para o projeto e será apresentando uma mensagem confirmando a instalação.
 
-![](imgs/img2.png)
+![](imgs/img2.png?raw=true)
 
 
 
