@@ -59,11 +59,15 @@ class Acao(Resource):
         parser.add_argument('cpf', type=str, required=True, help="Insira um CPF para alterar ou verificar o status da autorização.")
         parser.add_argument('acao', type=str)
         parser.add_argument('emancipado', type=bool)
+        parser.add_argument('responsavel', type=bool)
+        parser.add_argument('cpfResponsavel', type=str)
+        parser.add_argument('parentesco', type=int)
         parser.add_argument('file', type=werkzeug.datastructures.FileStorage, location='files')
         args = parser.parse_args()
         cpf = args['cpf']
         acao = args['acao']
         emancipado = args['emancipado']
+        responsavel = args['responsavel']
         if(acao == 'optin'):
             if (emancipado):
                 cloudinary.config(cloud_name='dhrv1rlbn', api_key='646476471328262',
@@ -73,6 +77,15 @@ class Acao(Resource):
                 if file_to_upload:
                     upload_result = cloudinary.uploader.upload(file_to_upload)
                     cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET documento = '" +upload_result["url"]+ "' WHERE CPF = '"+ cpf +"';")
+            if (responsavel):
+                cpfResponsavel = args['cpfResponsavel']
+                parentesco = args['parentesco']
+
+                respRow = None
+                respRow = cursor.execute("EXECUTE AS USER = 'app';  SELECT * FROM People where CPF = '" + cpfResponsavel + "'").fetchone()
+
+                if respRow:
+                    cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET responsavel = " + str(respRow.CustomerID) + ", parentescoID = " + str(parentesco) + " WHERE CPF = '"+ cpf +"';")
             cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET flag_documento = 1 WHERE CPF = '"+ cpf +"';")
             conn.commit()
 
@@ -85,6 +98,15 @@ class Acao(Resource):
                 if file_to_upload:
                     upload_result = cloudinary.uploader.upload(file_to_upload)
                     cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET documento = '" +upload_result["url"]+ "' WHERE CPF = '"+ cpf +"';")
+            if (responsavel):
+                cpfResponsavel = args['cpfResponsavel']
+                parentesco = args['parentesco']
+
+                respRow = None
+                respRow = cursor.execute("EXECUTE AS USER = 'app';  SELECT * FROM People where CPF = '" + cpfResponsavel + "'").fetchone()
+
+                if respRow:
+                    cursor.execute("EXECUTE AS USER = 'app'; UPDATE dbo.People SET responsavel = " + str(respRow.CustomerID) + ", parentescoID = " + str(parentesco) + " WHERE CPF = '"+ cpf +"';")
             cursor.execute("EXECUTE AS USER = 'app';  UPDATE dbo.People SET flag_documento = 0 WHERE CPF = '"+ cpf +"';")
             conn.commit()
         
