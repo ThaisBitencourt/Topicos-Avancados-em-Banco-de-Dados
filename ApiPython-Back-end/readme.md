@@ -18,7 +18,12 @@ No diretorio onde se encontra o arquivo requirements.txt
 
 -     pip install -r requirements.txt
 
+
+
 Após a execução do pip intall, todas as dependencias necessárias para o projeto e será apresentando uma mensagem confirmando a instalação.
+Execute o comando 
+
+-     python main.py
 
 ![](imgs/img2.PNG?raw=true)
 
