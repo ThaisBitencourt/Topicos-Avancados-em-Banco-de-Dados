@@ -1,7 +1,8 @@
 import os
 import cloudinary as cloudinary
-from flask import Flask, jsonify
+from flask import Flask, json, jsonify
 from flask_cors import CORS, cross_origin
+from flask_cors.core import RegexObject
 from flask_restful import Api, Resource, reqparse
 import cloudinary.uploader
 import werkzeug
@@ -13,12 +14,15 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 api = Api(app)
 
-
+connection_string=('Driver={SQL Server};'
+                    'Server=GLADOS\MSSQLSERVER01;'
+                    'Database=Northwind;'
+                    'Trusted_Connection=yes;')
 
 class ValidateFile(Resource):
-    def db_validate(self, people):
-        conn = pyodbc.connect('Driver={SQL Server Native Client 11.0};'
-                              'Server=localhost;'
+    def db_validate(self, people):      
+        conn = pyodbc.connect('Driver={SQL Server};'
+                              'Server=GLADOS\MSSQLSERVER01;'
                               'Database=Northwind;'
                               'Trusted_Connection=yes;')
         
@@ -46,8 +50,8 @@ class ValidateFile(Resource):
 class Acao(Resource):
     @cross_origin()
     def post(self):
-        conn = pyodbc.connect('Driver={SQL Server Native Client 11.0};'
-                              'Server=localhost;'
+        conn = pyodbc.connect('Driver={SQL Server};'
+                              'Server=GLADOS\MSSQLSERVER01;'
                               'Database=Northwind;'
                               'Trusted_Connection=yes;')
         cursor = conn.cursor() 
@@ -93,8 +97,26 @@ class Acao(Resource):
         else:
             return jsonify({'error':True, 'msg':'CPF não cadastrado'})
 
+
+class EmailMarketing(Resource):
+    def db_eml(self):      
+        conn = pyodbc.connect(connection_string)
+
+        cursor = conn.cursor()
+        retorno = ''
+        rows = cursor.execute("EXECUTE AS USER = 'sales1';  SELECT Email FROM Customers").fetchall()
+        for row in rows:
+            retorno = retorno + row.Email + ' ; '
+        return retorno
+
+    @cross_origin()
+    def get(self):
+        return jsonify({'resultData':self.db_eml()}) 
+
+
 api.add_resource(ValidateFile, "/validatefile")
 api.add_resource(Acao, "/changeflag")
+api.add_resource(EmailMarketing, "/emailmarketing")
 
 if __name__ == "__main__":
     app.run(debug=True)

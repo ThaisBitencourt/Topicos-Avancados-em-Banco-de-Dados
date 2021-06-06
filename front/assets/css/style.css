@@ -286,3 +286,36 @@ body{
 text-align: center;
 display:none;
 }
+
+.emailContainer {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* width */
+.emailContainer::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+/* Track */
+.emailContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+.emailContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.emailContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
