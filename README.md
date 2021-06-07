@@ -28,10 +28,10 @@ Considerando a Lei Geral de Proteção de Dados, Artigo 1º: “Esta Lei dispõe
 O foco do grupo será na Gestão de consentimento do titular ou responsável (OptIn/OptOut) e no compartilhamento consciente de arquivos com dados pessoais.
 
 ### Proposta de solução:
-Desenvolver uma Plataforma Web que faz gestão de OptIn e OptOut e verifica a existência de dados pessoais em arquivos (TXT e Word), otimizando os atendimentos de LGPD;
-Com acesso ao Banco de Dados de uma empresa (usaremos um banco de dados espelhado), iremos implementar flags para indicar o Consentimento ou Revogação do uso do dado pelo titular e armazenar o histórico de alteração considerando o período de cada permissão; 
+Desenvolver uma Plataforma Web que faz gestão de OptIn e OptOut e verifica a existência de dados pessoais em arquivos (TXT e Word), otimizando os atendimentos de LGPD; A própria será desenvolvida na linguagem de programaçao Python para desenvolver o validador juntamente com a biblioteca Pandas por conta de sua habilidade de simplificação.
+Com acesso ao Banco de Dados de uma empresa (usaremos um banco de dados espelhado), iremos implementar flags para indicar o Consentimento ou Revogação do uso do dado pelo titular e armazenar o histórico de alteração considerando o período de cada permissão; Para gerenciar o banco será utilizado o sistema SQL Server que é um dos principais SGBDs relacionais do mercado.
 A Varredura de Dados Pessoais irá buscar pelas seguintes informações: Nome, CPF, CNH, PIS, Endereço, Título de Eleitor, RG, Telefone e E-mail e retornar os dados encontrados de forma temporária, assim como o status de permissão (OptIn/OptOut);
-Ao que se refere a menores de idade, pela Lei “O tratamento de dados pessoais de crianças deverá ser realizado com o consentimento específico e em destaque dado por pelo menos um dos pais ou pelo responsável legal.”, será incluído o tratamento do dado mediante autorização de pai ou responsável ou anexo de documento comprovante de emancipação;
+Ao que se refere a menores de idade, pela Lei “O tratamento de dados pessoais de crianças deverá ser realizado com o consentimento específico e em destaque dado por pelo menos um dos pais ou pelo responsável legal.”, será incluído o tratamento do dado mediante autorização de pai ou responsável ou anexo de documento comprovante de emancipação. O Cloudinary será utilizado para fazer o upload desses documentos;
 Para auxiliar no envio de E-mails Marketing, será gerada uma lista apenas com e-mails autorizados (OptIn);
 Todos os testes serão realizados os testes com dados fictícios.
 
