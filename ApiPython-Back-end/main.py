@@ -68,6 +68,8 @@ class Acao(Resource):
         acao = args['acao']
         emancipado = args['emancipado']
         responsavel = args['responsavel']
+        print("------------")
+        print(responsavel)
         if(acao == 'optin'):
             if (emancipado):
                 cloudinary.config(cloud_name='dhrv1rlbn', api_key='646476471328262',
