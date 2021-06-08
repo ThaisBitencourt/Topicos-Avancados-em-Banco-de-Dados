@@ -7,7 +7,7 @@
     - [Sprint 01](#Sprint-01-) – 08/03/2021 a 28/03/2021
     - [Sprint 02](#sprint-02-) - 29/03/2021 a 18/04/2021
     - [Sprint 03](#sprint-03-)  - 26/04/2021 a 16/05/2021
-    - [Sprint 04](#sprint-04) - 17/05/2021 a 05/06/2021
+    - [Sprint 04](#sprint-04-) - 17/05/2021 a 05/06/2021
 
 ## Equipe
 
@@ -86,13 +86,13 @@ Todos os testes serão realizados os testes com dados fictícios.
 
 - [Buscador e Validador de Nome](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/commit/c42c4cb695a0678ff3a8b74f6124488e68e11b0d) via dicionário de dados.
 
-### Sprint 04
+### Sprint 04 ✔
 📅 *17/05/2021 a 05/06/2021*
-- Vincular cadastro de Menor de Idade com cadastro do Responsável via Plataforma Web.
+- [Vincular cadastro de Menor de Idade com cadastro do Responsável](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/commit/4ba126555017c1f374b2de7ff39c5024bb23be71#diff-9b695e45fae1ef70c0d9f91366ea28a63dd1ddf23b0cf36ba04bb057a6c34436) via Plataforma Web.
 
-- Gerar lista de e-mail marketing: e-mails autorizados pelo titular.
+- [Gerar lista de e-mail marketing](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/commit/494dd8de741a1d5aca18be8f6349cd82c5a35d66#diff-9b695e45fae1ef70c0d9f91366ea28a63dd1ddf23b0cf36ba04bb057a6c34436): e-mails autorizados pelo titular.
 
-- Desenvolver documentação técnica e de usabilidade da ferramenta.
+- Desenvolver documentação técnica do [backend](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/ApiPython-Back-end/readme.md), do [banco de dados](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/banco/readme.md) e de [usabilidade da ferramenta](https://github.com/ThaisBitencourt/Topicos-Avancados-em-Banco-de-Dados/blob/main/front/readme.md).
 
 ### Apresentação Final 
 📅 *07/06/2021 a 11/06/2021*
