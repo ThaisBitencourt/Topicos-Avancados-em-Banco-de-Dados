@@ -54,7 +54,8 @@
 
             $()
             $('#btnVerificar').click(function () {
-                const cpf = $('#cpfcnpj').val();
+                let cpf = $('#cpfcnpj').val();
+                cpf = cpf.replace(/[^0-9]/g, '');
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'verificar');
@@ -85,8 +86,8 @@
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'optin');
-                form.append('emancipado', emancipado);
-                form.append('responsavel', responsavel);
+                if (emancipado) form.append('emancipado', emancipado);
+                if (responsavel) form.append('responsavel', responsavel);
                 if (emancipado) {
                     if (file) {
                         form.append('file', file);
@@ -137,8 +138,8 @@
                 form = new FormData();
                 form.append('cpf', cpf);
                 form.append('acao', 'optout');
-                form.append('emancipado', emancipado);
-                form.append('responsavel', responsavel);
+                if (emancipado) form.append('emancipado', emancipado);
+                if (responsavel) form.append('responsavel', responsavel);
                 if (emancipado) {
                     if (file) {
                         form.append('file', file);
